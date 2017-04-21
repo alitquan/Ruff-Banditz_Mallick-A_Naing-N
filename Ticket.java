@@ -7,6 +7,7 @@ public class Ticket {
     private String solnDescription;
     private int ID;
 
+    /*---------------------------CONSTRUCTOR------------------------*/
     public Ticket (int vip, String desc, String nombre,String soln, int iden) {
 	vipLevel = vip;
 	description = desc;
@@ -15,11 +16,26 @@ public class Ticket {
 	solnDescription = soln;
 	ID = iden;
     }
-
+    /*------------------------------------------------------------------*/
     public int getVip() {
 	return vipLevel;
     }
-    
+    public String getDescription() {
+	return description;
+    }
+    public String getName() {
+	return name;
+    }
+    public boolean getResolved() {
+	return resolved;
+    }
+    public String getSoln() {
+	return solnDescription;
+    }
+    public int getID() {
+	return ID;
+    }
+  
     public int compareTo(Ticket other) {
 	if (this.getVip() > other.getVip()) 
 	    return 1;

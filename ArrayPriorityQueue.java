@@ -13,7 +13,7 @@
 
 import java.util.ArrayList;
 public class ArrayPriorityQueue {
-    private ArrayList container = new ArrayList <Integer>();
+    private ArrayList<Ticket> container = new ArrayList<Ticket>();
     private int size;
     
     public ArrayPriorityQueue() {
@@ -22,32 +22,33 @@ public class ArrayPriorityQueue {
 
     // removes element with the highest priority (lowest number)
     // returns the position of this element
-    public int deleteMin() {
+    public Ticket removeMin() {
         if (container.isEmpty())
-	    return -1;
-	int tempMin = (int) container.get(0);
+	    return null;
+	int tempMin = container.get(0).getVip();
 	int pos = 0;
 	for (int i = 0; i < container.size(); i++) {
-	    if ((int) container.get(i) < tempMin) { 
-		tempMin = (int) container.get(i);
+	    if ((container.get(i).getVip() < tempMin)) { 
+		tempMin = container.get(i).getVip();
 		pos = i;
 	    }
 	}
+	Ticket removed = container.get(pos);
 	container.remove(pos);
-	return pos;
+	return removed;
     }
 
     // removes element with the highest priority (lowest number)
     // returns the position this element
-    public int findMin() {
+    public Ticket findMin() {
 	if (container.isEmpty())
-	    return -1;
-	int tempMin =  (int) container.get(0);
+	    return null;
+	int tempMin = container.get(0).getVip();
 	for (int i = 0; i < container.size(); i++) {
-	    if ((int) container.get(i) < tempMin) 
-		tempMin = (int)container.get(i);
+	    if (container.get(i).getVip() < tempMin) 
+		tempMin = container.get(i).getVip();
 	}
-	return tempMin;
+	return container.get(tempMin);
     }
 
     // return true if container is empty; false otherwise
@@ -58,7 +59,7 @@ public class ArrayPriorityQueue {
     }
 
     // adds an object to the container
-    public int insert(int object) {
+    public Ticket insert(Ticket object) {
 	container.add(object);
 	size++;
 	return object;
@@ -67,15 +68,15 @@ public class ArrayPriorityQueue {
     // overriden toString() method 
     public String toString() {
 	String retStr = "[ ";
-	for (Object i: container) 
-	    retStr += String.valueOf ( (int) i) + " ";
+	for (Ticket i: container) 
+	    retStr += i.getName();
 	retStr += "]";
 	return retStr;
     }
 
     public static void main (String [] args) {
 	ArrayPriorityQueue buckShot = new ArrayPriorityQueue();
-	buckShot.insert(4);
+	/*buckShot.insert(4);
 	buckShot.insert(11);
 	buckShot.insert(1);
 	buckShot.insert(7);
@@ -96,7 +97,7 @@ public class ArrayPriorityQueue {
 	System.out.println (buckShot);
 	System.out.println ("Removing number " + buckShot.findMin());
 	System.out.println ("Removed index: " + buckShot.deleteMin());
-	System.out.println (buckShot);
+	System.out.println (buckShot); */
 	
     }
 	
