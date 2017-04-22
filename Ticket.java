@@ -45,6 +45,14 @@ public class Ticket {
 	    return -1;
     }
 
+    public String toString() {
+	String retVal = "";
+	retVal+= "\n VIP: "+ getVip() + "\n desc: " + getDescription();
+	retVal+= "\n name: " + getName() + "\n sol: " + getSoln();
+	retVal+= "\n ID: " + getID();
+	return retVal;
+    }
+
     public static void main (String [] args) {
 	Ticket a = new Ticket (23,"computer won't turn on","a","replace battery",1234);
 	Ticket b = new Ticket (12,"computer screen is broken","b","get a new one",5678);

@@ -21,34 +21,35 @@ public class ArrayPriorityQueue {
     }
 
     // removes element with the highest priority (lowest number)
-    // returns the position of this element
+    // returns the removed element
     public Ticket removeMin() {
         if (container.isEmpty())
 	    return null;
-	int tempMin = container.get(0).getVip();
+	Ticket tempMin = container.get(0);
 	int pos = 0;
 	for (int i = 0; i < container.size(); i++) {
-	    if ((container.get(i).getVip() < tempMin)) { 
-		tempMin = container.get(i).getVip();
+	    if (tempMin.compareTo(container.get(i))== 1 || tempMin.compareTo(container.get(i))== 0) {
+		tempMin = container.get(i);
 		pos = i;
 	    }
 	}
-	Ticket removed = container.get(pos);
+	Ticket removed = tempMin;
 	container.remove(pos);
 	return removed;
     }
 
     // removes element with the highest priority (lowest number)
-    // returns the position this element
+    // returns the element
     public Ticket findMin() {
 	if (container.isEmpty())
 	    return null;
-	int tempMin = container.get(0).getVip();
+	Ticket tempMin = container.get(0);
 	for (int i = 0; i < container.size(); i++) {
-	    if (container.get(i).getVip() < tempMin) 
-		tempMin = container.get(i).getVip();
+	    if (tempMin.compareTo(container.get(i))== 1 || tempMin.compareTo(container.get(i))== 0) {
+		tempMin = container.get(i);
+	    }
 	}
-	return container.get(tempMin);
+	return tempMin;
     }
 
     // return true if container is empty; false otherwise
@@ -69,13 +70,30 @@ public class ArrayPriorityQueue {
     public String toString() {
 	String retStr = "[ ";
 	for (Ticket i: container) 
-	    retStr += i.getName();
+	    retStr += i.getName() + " ";
 	retStr += "]";
 	return retStr;
     }
 
     public static void main (String [] args) {
 	ArrayPriorityQueue buckShot = new ArrayPriorityQueue();
+	Ticket Felipe = new Ticket (12,"abc","Felipe","def",1234);
+	Ticket Jack = new Ticket (7,"abc","Jack","def",234);
+	Ticket Jill = new Ticket (13,"abc","Jill","def",134);
+	Ticket Henry = new Ticket (1,"abc","Henry","def",124);
+	Ticket Benzy = new Ticket (6,"abc","Benzy","def",12324);
+	buckShot.insert(Felipe);
+	buckShot.insert(Jack);
+	buckShot.insert(Jill);
+	buckShot.insert(Henry);
+	buckShot.insert(Benzy);
+	System.out.println(buckShot.findMin());
+	System.out.println (buckShot);
+	System.out.println (buckShot.removeMin());
+	System.out.println (buckShot);
+	System.out.println (buckShot.removeMin());
+	System.out.println (buckShot);
+	
 	/*buckShot.insert(4);
 	buckShot.insert(11);
 	buckShot.insert(1);
