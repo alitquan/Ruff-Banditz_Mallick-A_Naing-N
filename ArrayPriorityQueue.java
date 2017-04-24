@@ -20,6 +20,14 @@ public class ArrayPriorityQueue {
 	size = 0;
     }
 
+    public Ticket getTicket(int target) {
+	return container.get(target);
+    }
+
+    public int getSize() {
+	return container.size();
+    }
+
     // removes element with the highest priority (lowest number)
     // returns the removed element
     public Ticket removeMin() {
@@ -69,9 +77,11 @@ public class ArrayPriorityQueue {
     // overriden toString() method 
     public String toString() {
 	String retStr = "[ ";
+	int x = 1;
 	for (Ticket i: container) {
-	    retStr += i.getName() + " ";
-	    retStr += "/n" + i.getDescription();
+	    retStr += "| " + x + " "+ i.getName() + " " + i.getID() + " | ";
+	    retStr += i.getVip() +" |\n ";
+	    x++;
 	}
 	retStr += "]";
 	return retStr;
@@ -79,18 +89,19 @@ public class ArrayPriorityQueue {
 
     public static void main (String [] args) {
 	ArrayPriorityQueue buckShot = new ArrayPriorityQueue();
+	/*
 	System.out.println("What is your name?");
-	String nameIn = Keyboard.readString();
+	String nameIn = readString();
 	System.out.println("What is your problem?");
-	String problemIn = Keyboard.readString();
+	String problemIn = readString();
+	*/
 	
-	Ticket Ed = new Ticket(1,problemIn, nameIn, "try again", 0001); //edit this main method, not sure what else to put
 	    
-	Ticket Felipe = new Ticket (12,"abc","Felipe","def",1234);
-	Ticket Jack = new Ticket (7,"abc","Jack","def",234);
-	Ticket Jill = new Ticket (13,"abc","Jill","def",134);
-	Ticket Henry = new Ticket (1,"abc","Henry","def",124);
-	Ticket Benzy = new Ticket (6,"abc","Benzy","def",12324);
+	Ticket Felipe = new Ticket (12,"abc","Felipe",1234);
+	Ticket Jack = new Ticket (7,"abc","Jack",234);
+	Ticket Jill = new Ticket (13,"abc","Jill",134);
+	Ticket Henry = new Ticket (1,"abc","Henry",124);
+	Ticket Benzy = new Ticket (6,"abc","Benzy",12324);
 	buckShot.insert(Felipe);
 	buckShot.insert(Jack);
 	buckShot.insert(Jill);

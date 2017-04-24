@@ -8,12 +8,12 @@ public class Ticket {
     private int ID;
 
     /*---------------------------CONSTRUCTOR------------------------*/
-    public Ticket (int vip, String desc, String nombre,String soln, int iden) {
+    public Ticket (int vip, String desc, String nombre, int iden) {
 	vipLevel = vip;
 	description = desc;
 	name = nombre;
 	resolved = false;
-	solnDescription = soln;
+	solnDescription ="";
 	ID = iden;
     }
     /*------------------------------------------------------------------*/
@@ -35,6 +35,13 @@ public class Ticket {
     public int getID() {
 	return ID;
     }
+    public String addSolution(String solution){
+	solnDescription = solution;
+	return solution;
+    }
+    public void setTrue(){
+	resolved = true;
+    }
   
     public int compareTo(Ticket other) {
 	if (this.getVip() > other.getVip()) 
@@ -43,6 +50,22 @@ public class Ticket {
 	    return 0;
 	else
 	    return -1;
+    }
+
+    public void changeVip (int tar) {
+	vipLevel = tar;
+    }
+
+    public void changeName (String name2) {
+	name = name2;
+    }
+
+    public void changeId (int newID) {
+	ID = newID;
+    }
+
+    public void changeDesc (String newDesc) {
+	description = newDesc;
     }
 
     public String toString() {
@@ -54,8 +77,8 @@ public class Ticket {
     }
 
     public static void main (String [] args) {
-	Ticket a = new Ticket (23,"computer won't turn on","a","replace battery",1234);
-	Ticket b = new Ticket (12,"computer screen is broken","b","get a new one",5678);
+	Ticket a = new Ticket (23,"computer won't turn on","a",1234);
+	Ticket b = new Ticket (12,"computer screen is broken","b",5671628);
 	System.out.println (a.compareTo(b));
     }
 }
