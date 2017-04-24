@@ -9,6 +9,7 @@ LAB03-RUVIP?
 # Design
 
 Our ticket.java has six instance variables:
+
 String name- name of ticket submitter
 
 String description - description of problem
