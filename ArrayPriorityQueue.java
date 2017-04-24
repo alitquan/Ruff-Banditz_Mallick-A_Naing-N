@@ -69,8 +69,10 @@ public class ArrayPriorityQueue {
     // overriden toString() method 
     public String toString() {
 	String retStr = "[ ";
-	for (Ticket i: container) 
+	for (Ticket i: container) {
 	    retStr += i.getName() + " ";
+	    retStr += "/n" + i.getDescription();
+	}
 	retStr += "]";
 	return retStr;
     }
