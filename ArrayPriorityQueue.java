@@ -79,6 +79,13 @@ public class ArrayPriorityQueue {
 
     public static void main (String [] args) {
 	ArrayPriorityQueue buckShot = new ArrayPriorityQueue();
+	System.out.println("What is your name?");
+	String nameIn = Keyboard.readString();
+	System.out.println("What is your problem?");
+	String problemIn = Keyboard.readString();
+	
+	Ticket Ed = new Ticket(1,problemIn, nameIn, "try again", 0001); //edit this main method, not sure what else to put
+	    
 	Ticket Felipe = new Ticket (12,"abc","Felipe","def",1234);
 	Ticket Jack = new Ticket (7,"abc","Jack","def",234);
 	Ticket Jill = new Ticket (13,"abc","Jill","def",134);
