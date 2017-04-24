@@ -1,2 +1,7 @@
-# Ruff-Banditz_Mallick-A_Naing-N
-HW#33: helpDesk
+Ruff Banditz - Alitquan Mallick and Nicolas Naing
+
+APCS2 pd4
+
+LAB03-RUVIP?
+
+2017-04-23
