@@ -12,7 +12,7 @@
 */
 
 import java.util.ArrayList;
-public class ArrayPriorityQueue {
+public class ArrayPriorityQueue implements PriorityQueue{
     private ArrayList<Ticket> container = new ArrayList<Ticket>();
     private int size;
     
@@ -46,8 +46,7 @@ public class ArrayPriorityQueue {
 	return removed;
     }
 
-    // removes element with the highest priority (lowest number)
-    // returns the element
+    // finds and returns element with the highest priority (lowest number)
     public Ticket findMin() {
 	if (container.isEmpty())
 	    return null;
@@ -89,13 +88,6 @@ public class ArrayPriorityQueue {
 
     public static void main (String [] args) {
 	ArrayPriorityQueue buckShot = new ArrayPriorityQueue();
-	/*
-	System.out.println("What is your name?");
-	String nameIn = readString();
-	System.out.println("What is your problem?");
-	String problemIn = readString();
-	*/
-	
 	    
 	Ticket Felipe = new Ticket (12,"abc","Felipe",1234);
 	Ticket Jack = new Ticket (7,"abc","Jack",234);
