@@ -75,14 +75,13 @@ public class ArrayPriorityQueue implements PriorityQueue{
 
     // overriden toString() method 
     public String toString() {
-	String retStr = "[ ";
+	String retStr = "\n ";
 	int x = 1;
 	for (Ticket i: container) {
 	    retStr += "| " + x + " "+ i.getName() + " " + i.getID() + " | ";
 	    retStr += i.getVip() +" |\n ";
 	    x++;
 	}
-	retStr += "]";
 	return retStr;
     }
 
