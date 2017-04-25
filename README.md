@@ -44,3 +44,4 @@ be inaccurate due to failure to account for simple words such as "the" and "an".
 # Features Yet To BE Added
 
 Unsolved problems will be put onto an APQ that will later be accessed to be solved
+If possible make APQ have generic typing (right now it is specifically for ticket)
