@@ -54,9 +54,6 @@ choose the most likely correct answer by matching words in the descriptions of t
 be inaccurate due to failure to account for simple words such as "the" and "an". But in my experience
 (Alitquan), it performs adequately, although improvement can, should, and will be made
 
-# Interdeveloper Chat
-
 If possible make APQ have generic typing (right now it is specifically for ticket).
 
-Hey Nicholas, how about you actually contribute to the project, instead of making me do everything! Nice suggestion,
-but I'm not a tool.
+if possible Nicholas, how about you actually do work instead of using your status as a 2nd term senior to exploit me?
