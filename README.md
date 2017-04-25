@@ -52,8 +52,5 @@ If the user ever wishes to stop using Helpdesk, he/she can just "call it a day" 
 Cross Reference command: This allows the user to quickly search through previously uploaded solutions and 
 choose the most likely correct answer by matching words in the descriptions of the two problems. It might 
 be inaccurate due to failure to account for simple words such as "the" and "an". But in my experience
-(Alitquan), it performs adequately, although improvement can, should, and will be made
+(Alitquan), it performs adequately, although improvements can, should, and will be made
 
-If possible make APQ have generic typing (right now it is specifically for ticket).
-
-if possible Nicholas, how about you actually do work instead of using your status as a 2nd term senior to exploit me?
